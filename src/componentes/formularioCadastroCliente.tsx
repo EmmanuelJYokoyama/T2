@@ -1,45 +1,30 @@
 import { Component } from "react";
+import '../styles/index.scss';
+import '../styles/formularioCadastroCliente.scss';
 
-type props = {
-    tema: string
-}
+
+type props = {}
 
 export default class FormularioCadastroCliente extends Component<props> {
-    
     render() {
-        let estiloBotao = `btn waves-effect waves-light ${this.props.tema}`
         return (
-            <div className="row">
-                <form className="col s12">
-                    <div className="row">
-                        <div className="input-field col s6">
-                            <input id="first_name" type="text" className="validate" />
-                            <label htmlFor="first_name">nome</label>
-                        </div>
-                        <div className="input-field col s6">
-                            <input id="last_name" type="text" className="validate" />
-                            <label htmlFor="last_name">sobrenome</label>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="input-field col s6">
-                            <input id="telefone" type="text" className="validate" />
-                            <label htmlFor="telefone">telefone</label>
-                        </div>
-                        <div className="input-field col s6">
-                            <input id="email" type="email" className="validate" />
-                            <label htmlFor="email">e-mail</label>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col s12">
-                            <button className={estiloBotao} type="submit" name="action">Submit
-                                <i className="material-icons right">send</i>
-                            </button>
-                        </div>
-                    </div>
+            <div className="form-box">
+                <form>
+                    <label>Nome</label>
+                    <input type="text" className="form-control" />
+
+                    <label>Sobrenome</label>
+                    <input type="text" className="form-control" />
+
+                    <label>Telefone</label>
+                    <input type="text" className="form-control" />
+
+                    <label>Email</label>
+                    <input type="email" className="form-control" />
+
+                    <button type="submit">Enviar</button>
                 </form>
             </div>
-        )
+        );
     }
 }

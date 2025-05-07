@@ -1,0 +1,66 @@
+@import "./index.scss";
+
+.navbar {
+    background-color: $secondary-color;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    .brand-logo {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+
+        li {
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease, text-decoration 0.3s ease;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: lighten($secondary-color, 20%);
+                }
+            }
+        }
+    }
+
+    // Responsividade
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .menu {
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .brand-logo {
+            font-size: 20px;
+        }
+
+        .menu {
+            gap: 5px;
+
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
