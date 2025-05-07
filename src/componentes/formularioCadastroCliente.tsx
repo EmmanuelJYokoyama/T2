@@ -1,28 +1,32 @@
 import { Component } from "react";
 import '../styles/index.scss';
-import '../styles/formularioCadastroCliente.scss';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 type props = {}
 
 export default class FormularioCadastroCliente extends Component<props> {
     render() {
         return (
-            <div className="form-box">
+            <div className="container mt-5">
+                <h2>Cadastro de Cliente</h2>
                 <form>
-                    <label>Nome</label>
-                    <input type="text" className="form-control" />
-
-                    <label>Sobrenome</label>
-                    <input type="text" className="form-control" />
-
-                    <label>Telefone</label>
-                    <input type="text" className="form-control" />
-
-                    <label>Email</label>
-                    <input type="email" className="form-control" />
-
-                    <button type="submit">Enviar</button>
+                    <div className="mb-3">
+                        <label className="form-label">Nome</label>
+                        <input type="text" className="form-control" placeholder="Digite o nome"/>
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label">Sobrenome</label>
+                        <input type="text" className="form-control" placeholder="Digite o sobrenome"/>
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label">Telefone</label>
+                        <input type="text" className="form-control" placeholder="Digite o telefone"/>
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label">Email</label>
+                        <input type="email" className="form-control" placeholder="Digite o email"/>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Enviar</button>
                 </form>
             </div>
         );

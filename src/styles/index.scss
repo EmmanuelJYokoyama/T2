@@ -1,11 +1,4 @@
-$primary-color: #d1c4e9;
-$secondary-color: #9575cd;
-$text-color: #333;
-$border-radius: 10px;
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: $primary-color;
-    margin: 0;
-    padding: 0;
-}
+@import "./colors.scss";
+@import "./navbar.scss";
+@import "./form.scss";
+@import "./list.scss";
