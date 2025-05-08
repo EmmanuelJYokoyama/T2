@@ -5,6 +5,7 @@ import CadastroProduto from "./cadastroProduto";
 import CadastroServico from "./cadastroServico";
 import ListagemProdutos from "./listagemProdutos";
 import ListagemServicos from "./listagemServicos";
+import ListaCliente from "./listaCliente";
 import "../styles/index.scss";
 
 export default class Roteador extends Component {
@@ -13,6 +14,8 @@ export default class Roteador extends Component {
             <Router>
                 <BarraNavegacao />
                 <Routes>
+                    <Route path="/" element={<ListaCliente/>} />
+                    <Route path="/clientes" element={<ListaCliente/>} />
                     <Route path="/cadastro-produto" element={<CadastroProduto />} />
                     <Route path="/cadastro-servico" element={<CadastroServico />} />
                     <Route path="/listagem-produto" element={<ListagemProdutos />} />
