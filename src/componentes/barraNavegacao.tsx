@@ -28,6 +28,7 @@ export default class BarraNavegacao extends Component {
                 <ul className="dropdown-menu" aria-labelledby="cadastroDropdown">
                   <li><Link className="dropdown-item" to="/cadastro-produto">Produto</Link></li>
                   <li><Link className="dropdown-item" to="/cadastro-servico">Serviço</Link></li>
+                  <li><Link className="dropdown-item" to="/cadastro-clientes">Clientes</Link></li>
                 </ul>
               </li>
 
